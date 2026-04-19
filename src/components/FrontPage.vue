@@ -1,9 +1,7 @@
-<script setup la
-  components: { ProjectCard },ng="ts">
+<script setup lang="ts">
 import ProjectCard from './ProjectCard.vue';
 import ItchIoIcon from './icons/ItchIoIcon.vue';
-import SteamIcon from './icons/SteamIcon.vue';
-function scrollTo(id) {
+function scrollTo(id : string) {
     const element = document.getElementById(id);
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -68,7 +66,7 @@ function scrollTo(id) {
                     </div>
                 </div>
                 <div class="w-200 md:block hidden">
-                    <img src="/public/headshot.jpg" class="rounded-lg brightness-90">
+                    <img src="/headshot.jpg" class="rounded-lg brightness-90">
                 </div>
             </div>
         </div>
