@@ -16,29 +16,29 @@ function scrollTo(id : string) {
 </script>
 
 <template>
-    <div class="flex flex-col">
-        <header class="lg:px-32 md:px-24 sm:px-14 px-8 fixed w-full flex flex-col gap-2 bg-linear-to-r from-slate-950 to-zinc-950 z-10 pt-8 pb-4" id="header">
+    <div class="flex flex-col items-center bg-linear-to-r from-slate-950 to-zinc-950">
+        <header class="max-w-7xl w-full sm:px-14 px-8 fixed flex flex-col gap-2 bg-linear-to-r from-slate-950 to-zinc-950 z-10 pt-8 pb-4" id="header">
             <div class="relative w-full border-b-2 border-white pb-4">
                 <h1 class="text-white md:text-4xl text-3xl font-bold">Birk Lerviks <span class="text-zinc-500 mx-2">\</span> <a href="index.html">Game Developer Portfolio</a></h1>
             </div>
             <div class="flex text-zinc-500 md:text-base text-sm font-bold pt-2 uppercase">
-                <button class="cursor-pointer px-4 hover:text-white" @click="scrollTo('about')">About</button>
-                <button class="cursor-pointer px-4 hover:text-white" @click="scrollTo('projects')">Projects</button>
-                <button class="cursor-pointer px-4 hover:text-white" @click="scrollTo('contact')">Contact</button>
-                <a href="https://www.linkedin.com/in/birk-lerviks-12450526a/" target="_blank" class="gap-2 mr-6 ml-auto">
+                <button class="cursor-pointer md:px-4 px-2 hover:text-white" @click="scrollTo('about')">About</button>
+                <button class="cursor-pointer md:px-4 px-2 hover:text-white" @click="scrollTo('projects')">Projects</button>
+                <button class="cursor-pointer md:px-4 px-2 hover:text-white" @click="scrollTo('contact')">Contact</button>
+                <a href="https://www.linkedin.com/in/birk-lerviks-12450526a/" target="_blank" class="gap-2 md:mr-6 mr-4 ml-auto">
                     <LinkedInIcon class="scale-125"/>
                 </a>
-                <a href="https://birklerviks.itch.io/" target="_blank" class="gap-2 mr-4">
+                <a href="https://birklerviks.itch.io/" target="_blank" class="mr-4">
                     <ItchIoIcon class="scale-125"/>
                 </a>
             </div>
         </header>
-        <main class="w-full pt-37 bg-linear-to-r from-slate-950 to-zinc-950 ">
-            <div class="lg:px-32 md:px-24 sm:px-14 px-8 text-white pb-20">
+        <main class="flex flex-col w-full items-center pt-37">
+            <div class="max-w-7xl w-full sm:px-14 px-8 text-white pb-20">
                 <div class="pt-6">
-                    <div class="flex gap-12 pt-4" id="about">
+                    <h2 class="text-4xl font-bold mb-4 pt-4" id="about">About</h2>
+                    <div class="flex gap-12">
                         <div class="flex flex-col gap-4 text-zinc-300">
-                            <h2 class="text-4xl font-bold mb-4">About</h2>
                             <div class="flex flex-col gap-4 lg:pl-4">
                                 <p>Hi! I'm a game developer interested in both designing gameplay experiences and building the tech that makes them possible, whether that's designing mechanics, crafting worlds, or doing deep dives into rendering and performance.</p>
                                 <p>At <i>Aalto University</i> in Helsinki, I worked on several game projects as producer, designer, and programmer. On <i>Conscience</i> and <i>Witch's Brew</i>, I led development while contributing to both game design and implementation, guiding mulitidisciplinary teams from initial concept to playable experience.</p>
@@ -206,7 +206,7 @@ function scrollTo(id : string) {
                     </div>
                 </div>
             </div>
-            <footer class="py-10 text-center text-zinc-500 bg-black">
+            <footer class="w-full py-10 text-center text-zinc-500 bg-black">
                 <p>Copyright © 2026 Birk Lerviks. All rights reserved.</p>
             </footer>
         </main>
