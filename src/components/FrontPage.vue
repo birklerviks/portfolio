@@ -36,14 +36,18 @@ function scrollTo(id : string) {
         <main class="flex flex-col w-full items-center pt-37">
             <div class="max-w-7xl w-full sm:px-14 px-8 text-white pb-20">
                 <div class="pt-6">
-                    <h2 class="text-4xl font-bold mb-4 pt-4" id="about">About</h2>
-                    <div class="flex gap-12">
+                    <div class="flex gap-8 pt-4" id="about">
                         <div class="flex flex-col gap-4 text-zinc-300">
-                            <div class="flex flex-col gap-4 lg:pl-4">
-                                <p>Hi! I'm a game developer interested in both designing gameplay experiences and building the tech that makes them possible, whether that's designing mechanics, crafting worlds, or doing deep dives into rendering and performance.</p>
-                                <p>At <i>Aalto University</i> in Helsinki, I worked on several game projects as producer, designer, and programmer. On <i>Conscience</i> and <i>Witch's Brew</i>, I led development while contributing to both game design and implementation, guiding mulitidisciplinary teams from initial concept to playable experience.</p>
-                                <p>For <i>Aris Arcanum</i>, originally a university project, I designed and implemented two boss fights, focusing on gameplay feel, pacing, and how to convey the game's narrative and tone through gameplay.</p>
-                                <p>At <i>Chalmers</i> and the <i>University of Gothenburg</i> I furthered my interest in game engine architecture and graphics programming. This led to my Master's thesis on Volumetric Temporal Anti-Aliasing together with Frostbite.</p>
+                            <h2 class="text-4xl font-bold mb-4">About</h2>
+                            <div class="flex flex-col gap-4 lg:pl-4 relative md:text-left text-justify">
+                                <div>
+                                    <img src="/headshot.jpg" class="md:hidden block h-32 w-32 object-cover zoom scale float-right rounded-full">
+                                    <p class="md:pr-0 pr-40">Hi! I'm a game developer interested in both designing gameplay experiences and building the tech that makes them possible, whether that's developing game mechanics, crafting worlds, or doing deep dives into rendering and performance.</p>
+                                </div>
+                                <p>I've worked in multidisciplinary teams as a designer, programmer, and producer, taking ideas from original concept to fully playable experiences. I'm especially interested in how gameplay, narrative, and technical execution come together to create cohesive player experiences.</p>
+                                <p>I also have experience in web development and customer support, giving me a strong understanding of both technical implementation and user-facing products.</p>
+                                <p>Beyond game development, I bring a creative background in theater and music, which influences how I approach pacing, storytelling, and player immersion.</p>
+                                <p>You'll find detailed breakdowns of my contributions in various projects below.</p>
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
                                 <p class="text-2xl font-bold text-white">Game Engines & Tools</p>
@@ -56,6 +60,8 @@ function scrollTo(id : string) {
                                     <p>GitHub</p>
                                     <p>Jira</p>
                                     <p>Notion</p>
+                                    <p>Vue</p>
+                                    <p>React</p>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -66,11 +72,12 @@ function scrollTo(id : string) {
                                     <p>GLSL</p>
                                     <p>HLSL</p>
                                     <p>Python</p>
+                                    <p>GDScript</p>
                                     <p>Javascript</p>
+                                    <p>Java</p>
                                     <p>HTML</p>
                                     <p>CSS</p>
                                     <p>Scala</p>
-                                    <p>Visual Basic</p>
                                 </div>
                             </div>
                         </div>
@@ -93,97 +100,148 @@ function scrollTo(id : string) {
                         <button class="cursor-pointer py-2 px-4 hover:text-white" @click="scrollTo('kahoot-sparks')">Kahoot! Sparks</button>
                     </div>
                     <div class="flex flex-col">
-                        <project-card :flip="true" id="frostbite">
-                            <template #header>Master's Thesis Project at Frostbite</template>
+                        <project-card :flip="true" id="aris-arcanum">
+                            <template #header>Aris Arcanum (PC, Steam)</template>
                             <template #description>
-                                <p>I am currently working on my Master's Thesis at Frostbite.</p>
-                                <p>As part of my research, I am implementing cutting-edge temporal anti-aliasing algorithms in a volumetric rendering context.</p>
-                            </template>
-                            <template #content>
-                                <img class="w-full h-full object-cover" src="https://gameworldobserver.com/wp-content/uploads/2023/12/frostbite-rebrand-ea.jpg">
-                            </template>
-                        </project-card>
-                        <project-card :flip="false" id="aris-arcanum">
-                            <template #header>Aris Arcanum</template>
-                            <template #description>
-                                <p>My biggest contribution to the game <i>Aris Arcanum</i> was designing and implementing the two boss fights. I also contributed with various gameplay systems and added controller support.</p>
+                                <p><b>Role:</b> Gameplay Designer, Programmer</p>
+                                <p><b>Company: </b> Broken Cane</p>
+                                <p><b>Team size:</b> 7 | <b>Duration:</b> 12 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Designed and implemented two boss fights from initial concept to final gameplay</li>
+                                    <li>Built supporting gameplay systems and integrated controller support</li>
+                                    <li>Iterated on combat flow based on playtesting and player feedback</li>
+                                </ul>
+                                <p><b>Engines and tools:</b> Unity, C#</p>
                                 <p>Check out the project on <a href="https://store.steampowered.com/app/3006080/Aris_Arcanum/" target="_blank" class="underline hover:underline">Steam</a></p>
-                                <p><i>Engines and tools:</i> Unity, C#</p>
-                                <p><i>Platforms: </i> PC</p>
                             </template>
                             <template #content>
                                 <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/VQCOLdqp_Lw?si=XDMZWmjq_s5uqyms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="true" id="planet-shader">
-                            <template #header>Volumetric Planet Shader</template>
-                            <template #description>
-                                <p>For this university project, I implemented the entire pipeline for generating, and rendering a stylized planet with realistic atmosphere and clouds.</p>
-                                <p>The planet is procedurally generated in a compute shader and lit using a combination of ray marching and traditional lighting techniques.</p>
-                                <p><i>Engines and tools:</i> GLSL, C++</p>
-                            </template>
-                            <template #content>
-                                <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/LwNbftrN8QU?si=qbzwRHfs4QShov8v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </template>
-                        </project-card>
                         <project-card :flip="false" id="conscience">
-                            <template #header>Conscience</template>
+                            <template #header>Conscience (PC)</template>
                             <template #description>
-                                <p>Conscience is a short narrative-focused mystery horror game in which you explore a house to find out what happened to the family that lived there.</p>
-                                <p>In this project I acted as project leader, responsible for the game direction and coordination of the 7-person development team. I also designed and implemented many of the game systems.</p>
+                                <p><b>Role:</b> Project Lead, Designer & Programmer</p>
+                                <p><b>Team size:</b> 7 | <b>Duration:</b> 3 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Created the initial concept, and defined game direction, scope, and production priorities throughout development</li>
+                                    <li>Led development from concept to playable release, coordinating a multidisciplinary team</li>
+                                    <li>Designed and implemented core gameplay systems and interaction mechanics</li>
+                                    <li>Created a modular architecture system and created most of the 3D art assets, also some 2D assets</li>
+                                    <li>Worked closely with narrative and audio to align tone and player experience</li>
+                                </ul>
+                                <p><b>Engines and tools:</b> Unreal Engine, Blueprints, C++, Blender, Photoshop</p>
                                 <p>Check out the project on <a href="https://birklerviks.itch.io/conscience" target="_blank" class="underline hover:underline">itch.io</a></p>
-                                <p><i>Engines and tools:</i> Unreal Engine, Blueprints, C++</p>
-                                <p><i>Platforms:</i> PC</p>
                             </template>
                             <template #content>
                                 <iframe class="w-full h-full object-cover" title="vimeo-player" src="https://player.vimeo.com/video/799027301?h=34c43446b3" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="true" id="witchs-brew">
+                        <project-card :flip="true" id="frostbite">
+                            <template #header>Master's Thesis Project at Frostbite</template>
+                            <template #description>
+                                <p><b>Role:</b> Master's Thesis Intern</p>
+                                <p><b>Company: </b> Frostbite (Electronic Arts)</p>
+                                <p><b>Duration:</b> 6 months (ongoing)</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Researching and implementing temporal anti-aliasing techniques for volumetric rendering</li>
+                                    <li>Working with cutting-edge rendering methods in a production engine environment</li>
+                                    <li>Evaluating visual quality and performance trade-offs of different approaches</li>
+                                </ul>
+                            </template>
+                            <template #content>
+                                <img class="w-full h-full object-cover" src="https://gameworldobserver.com/wp-content/uploads/2023/12/frostbite-rebrand-ea.jpg">
+                            </template>
+                        </project-card>
+                        <project-card :flip="false" id="witchs-brew">
                             <template #header>Witch's Brew</template>
                             <template #description>
-                                <p>This university project is a 3D exploration adventure where you find yourself stranded on a magical island and must find a way to escape.</p>
-                                <p>In this project I acted as project leader, responsible for the game direction and coordination of the 8-person development team. I also designed and implemented many of the game systems.</p>
+                                <p><b>Role:</b> Project Lead, Designer & Programmer</p>
+                                <p><b>Team size:</b> 8 | <b>Duration:</b> 3 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Created the initial concept, and defined game direction, scope, and production priorities throughout development</li>
+                                    <li>Directed development of a 3D exploration / adventure experience from early concept to playable game</li>
+                                    <li>Designed and implemented gameplay systems for exploration, dialogue, inventory management, and potion crafting</li>
+                                    <li>Balanced scope and features to maintain a cohesive player experience, especially important given the limited development time</li>
+                                </ul>
+                                <p><b>Engines and tools:</b> Unity, C#</p>
                                 <p>Check out the project on <a href="https://jintastic.itch.io/witchs-brew" target="_blank" class="underline hover:underline">itch.io</a></p>
-                                <p><i>Engines and tools:</i> Unity, C#</p>
-                                <p><i>Platforms: </i> PC</p>
                             </template>
                             <template #content>
                                 <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/hm6OkGk7Hik?si=LRRmymiygBCP7K7n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="false" id="the-unfortunates">
-                            <template #header>The Unfortunates</template>
+                        <project-card :flip="true" id="planet-shader">
+                            <template #header>Volumetric Planet Shader (PC)</template>
                             <template #description>
-                                <p>In this narrative focused game you play the role of The Keeper, the spirit responsible for the branch of unfortunate souls, one of the many islands in the crossroads - the place before the afterlife.</p>
-                                <p>My key contributions included designing and implementing various gameplay systems, and helping to define the narrative flow and structure.</p>
-                                <p>Check out the project on <a href="https://birklerviks.itch.io/the-unfortunates" target="_blank" class="underline hover:underline">itch.io</a></p>
-                                <p><i>Engines and tools:</i> Unity, C#</p>
-                                <p><i>Platforms: </i> PC</p>
+                                <p><b>Role:</b> Graphics Programmer</p>
+                                <p><b>Team size:</b> 2 | <b>Duration:</b> 2 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Built a full procedural planet generation and rendering pipeline from scratch</li>
+                                    <li>Implemented compute shader–based terrain generation</li>
+                                    <li>Developed volumetric atmosphere and cloud rendering using ray marching</li>
+                                    <li>Combined physically inspired lighting with stylized visual direction</li>
+                                    <li>Optimized both planet generation and volumetric rendering to run in real-time on modern hardware</li>
+                                </ul>
+                                <p><i>Engines and tools:</i> GLSL, C++, ImGui</p>
                             </template>
                             <template #content>
-                                <img class="w-full h-full object-cover" src="https://img.itch.zone/aW1hZ2UvNDAzMjI1NS8yNDAzOTc3MC5qcGc=/original/gVGB8t.jpg">
+                                <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/LwNbftrN8QU?si=qbzwRHfs4QShov8v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="true" id="dungeons-and-chatbots">
-                            <template #header>Dungeons and Chatbots</template>
+                        <project-card :flip="false" id="dungeons-and-chatbots">
+                            <template #header>Dungeons and Chatbots (PC)</template>
                             <template #description>
-                                <p>This university project explores how generative AI can be used in a real-time gameplay context. Everything in the game world is dynamically generated at runtime.</p>
-                                <p>My key contributions included implementation of the AI generation systems and integration with the game engine, as well as the design and implementation of various gameplay systems such as a robust load and save system.</p>
-                                <p><i>Engines and tools:</i> Unity, C#</p>
-                                <p><i>Platforms: </i> PC</p>
+                                <p><b>Role:</b> Gameplay Designer & Systems Programmer</p>
+                                <p><b>Team size:</b> 4 | <b>Duration:</b> 2 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Implemented real-time generative AI systems driving dynamic game content, supporting text, images, and audio</li>
+                                    <li>Integrated AI pipelines into the game engine for runtime world generation</li>
+                                    <li>Designed and built core gameplay systems, including a robust save/load system</li>
+                                    <li>Explored design implications of generative AI-driven gameplay, focusing on player agency, immersion, and narrative coherence</li>
+                                </ul>
+                                <p><i>Engines and tools:</i> Unity, C#, Gemini</p>
                             </template>
                             <template #content>
                                 <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/1imfNe6lKvU?si=NQdYZCY33Mr3xPc9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="false" id="kahoot-sparks">
-                            <template #header>Kahoot! Sparks</template>
+                        <project-card :flip="true" id="the-unfortunates">
+                            <template #header>The Unfortunates (PC)</template>
                             <template #description>
-                                <p>During my time at <a href="https://whiteboard.fi" target="_blank" class="underline hover:underline">Whiteboard.fi</a> I worked on various projects, including the development of gamified learning experiences such as Kahoot! Sparks.</p>
-                                <p>My key contributions included implementing the core functionality and user interface for the Sparks platform, in close collaboration with the Kahoot! design and development team.</p>
-                                <p><i>Engines and tools:</i> HTML, CSS, JavaScript</p>
-                                <p><i>Platforms: </i> Web</p>
+                                <p><b>Role:</b> Gameplay Designer & Programmer</p>
+                                <p><b>Team size:</b> 7 | <b>Duration:</b> 2 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Designed and implemented multiple gameplay systems, focusing on their utility for narrative progression</li>
+                                    <li>Helped shape narrative structure and pacing of the experience</li>
+                                    <li>Collaborated closely with team to align gameplay and storytelling</li>
+                                </ul>
+                                <p><i>Engines and tools:</i> Unity, C#, Gemini</p>
+                            </template>
+                            <template #content>
+                                <img class="w-full h-full object-cover" src="https://img.itch.zone/aW1hZ2UvNDAzMjI1NS8yNDAzOTc3MC5qcGc=/original/gVGB8t.jpg">
+                            </template>
+                        </project-card>
+                        <project-card :flip="false" id="kahoot-sparks">
+                            <template #header>Kahoot! Sparks (Web)</template>
+                            <template #description>
+                                <p><b>Role:</b> Frontend Developer</p>
+                                <p><b>Company: </b>Whiteboard.fi, a Kahoot! company</p>
+                                <p><b>Team size:</b> 8 | <b>Duration:</b> 6 months</p>
+                                <p><b>My main contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Developed core functionality for a gamified learning platform (edutainment)</li>
+                                    <li>Built responsive UI components in close collaboration with design teams</li>
+                                    <li>Worked with production systems in a live product environment</li>
+                                </ul>
+                                <p><i>Engines and tools:</i> JavaScript, HTML, CSS, Vue, TailwindCSS, Figma</p>
                             </template>
                             <template #content>
                                 <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/rarrXMD74qo?si=mPEqxhwhFhsUJmBV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -194,7 +252,7 @@ function scrollTo(id : string) {
                 <div class="pt-16">
                     <h2 class="text-4xl font-bold mb-4 pt-4" id="contact">Contact</h2>
                     <div class="w-full border-b-2 border-white mb-4"></div>
-                    <p class="text-zinc-300">Please feel free to reach out if you want to chat about game development, or if you're interested in working together!</p>
+                    <p class="text-zinc-300">Please feel free to reach out if you want to play some pinball, or if you're interested in working together!</p>
                     <p class="text-zinc-300 mt-4">birklerviks@gmail.com</p>
                     <div class="flex flex-row mt-6 gap-4 pl-0.5">
                         <a href="https://www.linkedin.com/in/birk-lerviks-12450526a/" target="_blank">
@@ -206,8 +264,8 @@ function scrollTo(id : string) {
                     </div>
                 </div>
             </div>
-            <footer class="w-full py-10 text-center text-zinc-500 bg-black">
-                <p>Copyright © 2026 Birk Lerviks. All rights reserved.</p>
+            <footer class="w-full py-10 flex items-center justify-center text-center text-zinc-500 bg-black">
+                <p>Copyright © 2026 Birk Lerviks. <br class="sm:hidden"> All rights reserved.</p>
             </footer>
         </main>
     </div>
