@@ -225,7 +225,7 @@ function scrollTo(id : string) {
                                     <li>Helped shape narrative structure and pacing of the experience</li>
                                     <li>Collaborated closely with team to align gameplay and storytelling</li>
                                 </ul>
-                                <p><b>Engines and tools:</b> Unity, C#, Gemini</p>
+                                <p><b>Engines and tools:</b> Unity, C#</p>
                                 <p>Check out The Unfortunates on <a href="https://birklerviks.itch.io/the-unfortunates" target="_blank" class="underline hover:underline">itch.io</a></p>
                             </template>
                             <template #content>
