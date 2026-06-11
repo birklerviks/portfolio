@@ -66,6 +66,10 @@ function scrollTo(id : string) {
                                     <p>React</p>
                                     <p>Unreal Engine Blueprints</p>
                                     <p>Shader Graph</p>
+                                    <p>RenderDoc</p>
+                                    <p>Blender</p>
+                                    <p>Photoshop</p>
+                                    <p>Figma</p>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -117,7 +121,7 @@ function scrollTo(id : string) {
                                     <li>Developed and implemented novel temporal anti-aliasing techniques for volumetric rendering, enabling high-quality dynamic volumetric lighting</li>
                                     <li>Working with cutting-edge rendering methods in a production engine environment</li>
                                 </ul>
-                                <p><b>Engines and tools:</b> Frostbite, C++, HLSL</p>
+                                <p><b>Engines and tools:</b> Frostbite, C++, HLSL, RenderDoc</p>
                             </template>
                             <template #content>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wKfzuX3TBG0?si=PBjiXIAWEkoKwCWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
