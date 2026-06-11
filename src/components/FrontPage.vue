@@ -64,6 +64,8 @@ function scrollTo(id : string) {
                                     <p>Notion</p>
                                     <p>Vue</p>
                                     <p>React</p>
+                                    <p>Unreal Engine Blueprints</p>
+                                    <p>Shader Graph</p>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -73,6 +75,7 @@ function scrollTo(id : string) {
                                     <p>C#</p>
                                     <p>GLSL</p>
                                     <p>HLSL</p>
+                                    <p>Compute Shaders</p>
                                     <p>Python</p>
                                     <p>GDScript</p>
                                     <p>Javascript</p>
@@ -89,7 +92,7 @@ function scrollTo(id : string) {
                     </div>
                 </div>
                 <div class="pt-16 -mb-20">
-                    <h2 class="sm:text-4xl text-2xl font-bold mb-4 pt-4" id="projects">Projects</h2>
+                    <h2 class="sm:text-4xl text-2xl font-bold mb-4 pt-4" id="projects">Select Projects</h2>
                     <div class="w-full border-b-2 border-white mb-4"></div>
                     <div class="hidden sm:flex flex-wrap text-zinc-500 md:text-base text-sm font-bold uppercase flex gap-6 px-4">
                         <button class="cursor-pointer hover:text-white" @click="scrollTo('frostbite')">Frostbite</button>
@@ -102,15 +105,33 @@ function scrollTo(id : string) {
                         <button class="cursor-pointer hover:text-white" @click="scrollTo('kahoot-sparks')">Kahoot! Sparks</button>
                     </div>
                     <div class="flex flex-col sm:mt-8">
-                        <project-card :flip="true" id="aris-arcanum">
+                        <project-card :flip="true" id="frostbite">
+                            <template #header>Volumetric Temporal Anti-Aliasing at Frostbite</template>
+                            <template #description>
+                                <p><b>Role:</b> Master's Thesis Intern</p>
+                                <p><b>Company: </b> Frostbite (Electronic Arts)</p>
+                                <p><b>Duration:</b> 6 months</p>
+                                <p><b>My contributions:</b></p>
+                                <ul class="list-disc list-outside ml-8">
+                                    <li>Improved the volumetric rendering capabilities of the Frostbite engine</li>
+                                    <li>Developed and implemented novel temporal anti-aliasing techniques for volumetric rendering, enabling high-quality dynamic volumetric lighting</li>
+                                    <li>Working with cutting-edge rendering methods in a production engine environment</li>
+                                </ul>
+                                <p><b>Engines and tools:</b> Frostbite, C++, HLSL</p>
+                            </template>
+                            <template #content>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/wKfzuX3TBG0?si=PBjiXIAWEkoKwCWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </template>
+                        </project-card>
+                        <project-card :flip="false" id="aris-arcanum">
                             <template #header>Aris Arcanum (PC, Steam)</template>
                             <template #description>
                                 <p><b>Role:</b> Gameplay Designer, Programmer</p>
                                 <p><b>Company: </b> Broken Cane</p>
                                 <p><b>Team size:</b> 7 | <b>Duration:</b> 12 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
-                                    <li>Designed and implemented two boss fights from initial concept to final gameplay</li>
+                                    <li>Designed two boss fights and implemented them in Unity using C#</li>
                                     <li>Built supporting gameplay systems and integrated controller support</li>
                                     <li>Iterated on combat flow based on playtesting and player feedback</li>
                                 </ul>
@@ -121,17 +142,17 @@ function scrollTo(id : string) {
                                 <iframe class="w-full h-full object-cover" width="560" height="315" src="https://www.youtube.com/embed/VQCOLdqp_Lw?si=XDMZWmjq_s5uqyms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="false" id="conscience">
+                        <project-card :flip="true" id="conscience">
                             <template #header>Conscience (PC, Itch.io)</template>
                             <template #description>
                                 <p><b>Role:</b> Project Lead, Designer & Programmer</p>
                                 <p><b>Team size:</b> 7 | <b>Duration:</b> 3 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
-                                    <li>Created the initial concept, and defined game direction, scope, and production priorities throughout development</li>
+                                    <li>Created the original concept, and defined game direction, scope, and production priorities throughout development</li>
                                     <li>Led development from concept to playable release, coordinating a multidisciplinary team</li>
-                                    <li>Designed and implemented core gameplay systems and interaction mechanics</li>
-                                    <li>Created a modular architecture system and created most of the 3D art assets, also some 2D assets</li>
+                                    <li>Designed and implemented core gameplay systems and interaction mechanics in Unreal Engine using Blueprints and C++</li>
+                                    <li>Created a modular architecture system and created most of the 3D art assets in Blender, also some 2D assets in Photoshop</li>
                                     <li>Worked closely with narrative and audio to align tone and player experience</li>
                                 </ul>
                                 <p><b>Engines and tools:</b> Unreal Engine, Blueprints, C++, Blender, Photoshop</p>
@@ -141,33 +162,16 @@ function scrollTo(id : string) {
                                 <iframe class="w-full h-full object-cover" title="vimeo-player" src="https://player.vimeo.com/video/799027301?h=34c43446b3" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
                             </template>
                         </project-card>
-                        <project-card :flip="true" id="frostbite">
-                            <template #header>Master's Thesis Project at Frostbite</template>
-                            <template #description>
-                                <p><b>Role:</b> Master's Thesis Intern</p>
-                                <p><b>Company: </b> Frostbite (Electronic Arts)</p>
-                                <p><b>Duration:</b> 6 months (ongoing)</p>
-                                <p><b>My main contributions:</b></p>
-                                <ul class="list-disc list-outside ml-8">
-                                    <li>Researching and implementing temporal anti-aliasing techniques for volumetric rendering</li>
-                                    <li>Working with cutting-edge rendering methods in a production engine environment</li>
-                                    <li>Evaluating visual quality and performance trade-offs of different approaches</li>
-                                </ul>
-                            </template>
-                            <template #content>
-                                <img class="w-full h-full object-cover" src="https://gameworldobserver.com/wp-content/uploads/2023/12/frostbite-rebrand-ea.jpg">
-                            </template>
-                        </project-card>
                         <project-card :flip="false" id="witchs-brew">
                             <template #header>Witch's Brew (PC, Itch.io)</template>
                             <template #description>
                                 <p><b>Role:</b> Project Lead, Designer & Programmer</p>
                                 <p><b>Team size:</b> 8 | <b>Duration:</b> 3 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
-                                    <li>Created the initial concept, and defined game direction, scope, and production priorities throughout development</li>
-                                    <li>Directed development of a 3D exploration / adventure experience from early concept to playable game</li>
-                                    <li>Designed and implemented gameplay systems for exploration, dialogue, inventory management, and potion crafting</li>
+                                    <li>Created the original concept, and defined game direction, scope, and production priorities throughout development</li>
+                                    <li>Directed development of the 3D exploration / adventure experience from early concept to playable game</li>
+                                    <li>Designed and implemented gameplay systems for exploration, dialogue, inventory management, and potion crafting in Unity using C# and Yarn Spinner</li>
                                     <li>Balanced scope and features to maintain a cohesive player experience, especially important given the limited development time</li>
                                 </ul>
                                 <p><b>Engines and tools:</b> Unity, C#</p>
@@ -182,7 +186,7 @@ function scrollTo(id : string) {
                             <template #description>
                                 <p><b>Role:</b> Graphics Programmer</p>
                                 <p><b>Team size:</b> 2 | <b>Duration:</b> 2 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
                                     <li>Built a full procedural planet generation and rendering pipeline from scratch</li>
                                     <li>Implemented compute shader–based terrain generation</li>
@@ -201,7 +205,7 @@ function scrollTo(id : string) {
                             <template #description>
                                 <p><b>Role:</b> Gameplay Designer & Systems Programmer</p>
                                 <p><b>Team size:</b> 4 | <b>Duration:</b> 2 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
                                     <li>Implemented real-time generative AI systems driving dynamic game content, supporting text, images, and audio</li>
                                     <li>Integrated AI pipelines into the game engine for runtime world generation</li>
@@ -219,7 +223,7 @@ function scrollTo(id : string) {
                             <template #description>
                                 <p><b>Role:</b> Gameplay Designer & Programmer</p>
                                 <p><b>Team size:</b> 7 | <b>Duration:</b> 2 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
                                     <li>Designed and implemented multiple gameplay systems, focusing on their utility for narrative progression</li>
                                     <li>Helped shape narrative structure and pacing of the experience</li>
@@ -238,7 +242,7 @@ function scrollTo(id : string) {
                                 <p><b>Role:</b> Frontend Developer</p>
                                 <p><b>Company: </b>Whiteboard.fi, a Kahoot! company</p>
                                 <p><b>Team size:</b> 8 | <b>Duration:</b> 6 months</p>
-                                <p><b>My main contributions:</b></p>
+                                <p><b>My contributions:</b></p>
                                 <ul class="list-disc list-outside ml-8">
                                     <li>Developed core functionality for a gamified learning platform (edutainment)</li>
                                     <li>Built responsive UI components in close collaboration with design teams</li>
